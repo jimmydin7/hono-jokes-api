@@ -26,4 +26,11 @@ import { createJoke, deleteJoke, listJokes } from "./db/queries";
   return c.json({ ok: true })
  })
 
- export default app
+
+
+const port = Number(process.env.PORT) || 4343
+
+export default {
+  port,
+  fetch: app.fetch,
+}
