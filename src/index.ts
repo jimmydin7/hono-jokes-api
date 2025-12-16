@@ -2,6 +2,8 @@ import { Hono } from "hono"
 
 const app = new Hono()
 
+app.get("/", (c) => c.text("Welcome to Jim's joke api! You can list, add and remove jokes from here."))
+
 import { createJoke, deleteJoke, listJokes } from "./db/queries";
 
  app.get("/api/jokes", (c) => c.json(listJokes()))
@@ -23,3 +25,5 @@ import { createJoke, deleteJoke, listJokes } from "./db/queries";
 
   return c.json({ ok: true })
  })
+
+ export default app
