@@ -28,7 +28,7 @@ import { createJoke, deleteJoke, listJokes } from "./db/queries";
 
 
 
-const port = Number(process.env.PORT) || 4343
+const port = Number(process.env.PORT) || 3000
 
 export default {
   port,
